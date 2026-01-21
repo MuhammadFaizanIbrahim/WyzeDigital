@@ -40,7 +40,17 @@ export default function HoverFeatureMarquee({ className = "" }) {
 
   const onEnter = (e) => {
     lastXRef.current = e.clientX;
+  
+    // Initial nudge on hover
+    const nudge = 20; // tweak this value for how much initial slide
+    offsetRef.current -= nudge;
+  
+    const el = trackRef.current;
+    if (el) {
+      el.style.transform = `translateX(${offsetRef.current}px)`;
+    }
   };
+  
 
   const onMove = (e) => {
     const dx = e.clientX - lastXRef.current;
