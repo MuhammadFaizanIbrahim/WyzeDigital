@@ -65,7 +65,7 @@ export default function TeamShowcase() {
       const PIN_Y = -55; // frame 1 pinned a bit upper (negative = up)
 
       // Delay pin so heading + para are fully readable before pin
-      const A_START = 0.06;
+      const A_START = 0.01;
       const A_END = 0.38;
       const aT = easeOutCubic(clamp01((p - A_START) / (A_END - A_START)));
 
