@@ -19,22 +19,22 @@ export default function TeamShowcase() {
     const people = useMemo(
       () => [
         {
-          name: "Aiden Clark",
-          role: "Creative director",
+          name: "Jason",
+          role: "Brandswaggin",
           type: "vimeo",
           videoId: "1069396395",
           hash: "bb23cc33a8",
         },
         {
-          name: "Noah Bennett",
-          role: "Lead UI/UX designer",
+          name: "Chantale",
+          role: "Branding Co.",
           type: "vimeo",
           videoId: "1069396364",
           hash: "c2d31c6f1a",
         },
         {
-          name: "Maya Lopez",
-          role: "Web developer",
+          name: "Catherine Luparello",
+          role: "Evoblocs",
           type: "vimeo",
           videoId: "1069396416",
           hash: "acfe425787",
