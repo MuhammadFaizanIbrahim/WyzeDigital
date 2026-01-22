@@ -6,9 +6,9 @@ import HoverFeatureMarquee from '../components/HoverFeatureMarquee'
 const SecondSection = () => {
   return (
     <div className="min-h-screen">
-    <HoverFeatureMarquee />
-    <ScrollRevealParagraph />
     <CircleLoopSlider />
+    <ScrollRevealParagraph />
+    <HoverFeatureMarquee />
   </div>  )
 }
 

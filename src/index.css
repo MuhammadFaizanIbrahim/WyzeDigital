@@ -340,7 +340,6 @@ body {
   /* color: var(--nav-link-color); */
 }
 
-
 .navigation-link-text:hover {
   color: var(--brand-ink);
 }
@@ -983,13 +982,6 @@ body {
 .circle-loop-viewport {
   width: 100%;
   overflow: hidden;
-  margin-top: 11rem;
-}
-
-@media (max-width: 786px) {
-  .circle-loop-viewport {
-    margin-top: 8rem;
-  }
 }
 
 .circle-loop-track {
@@ -1058,15 +1050,14 @@ body {
 .letter-reveal-section {
   width: 100%;
   background: var(--bg);
-  margin-top: 12rem;
+  margin-top: 10rem;
 }
 
 @media (max-width: 786px) {
   .letter-reveal-section {
-    margin-top: 8rem;
+    margin-top: 5rem;
   }
 }
-
 
 .letter-reveal-container {
   max-width: 85rem;
@@ -1190,9 +1181,14 @@ body {
 
 .feature-marquee {
   width: 100%;
-  margin-top: var(--fm-mt, 10px);
+  margin-top: 11rem;
 }
 
+@media (max-width: 786px) {
+  .feature-marquee {
+    margin-top: 5rem;
+  }
+}
 .feature-marquee-viewport {
   width: 100%;
   height: 12vh;
@@ -1286,7 +1282,8 @@ body {
 
 @media (max-width: 786px) {
   .services-section {
-    padding: 1rem 0 2rem 0;
+    padding: 0rem 0 2rem 0;
+    margin-top: -2rem;
   }
 }
 
@@ -1753,7 +1750,6 @@ body {
   }
 }
 
-
 /* Reduced motion: always upright */
 @media (prefers-reduced-motion: reduce) {
   .project-card {
@@ -1859,6 +1855,8 @@ body {
   transform: translateY(0px);
   box-shadow: var(--shadow-hard);
 }
+
+/* ******************* Team Section *************** */
 
 .team-section {
   position: relative;
@@ -1975,7 +1973,7 @@ body {
 
 /* ✅ fully opaque background so top card hides the one below */
 .team-card-shell {
-  width: clamp(260px, 22vw, 330px);
+  width: clamp(320px, 28vw, 470px);
   border-radius: 44px;
   border: 2px solid #111;
   background: #fff; /* ✅ important */
@@ -2091,7 +2089,13 @@ body {
   width: 100%;
   background: var(--bg);
   padding: 110px 0;
-  margin-top: -10%;
+  margin-top: -2%;
+}
+
+@media (max-width: 786px) {
+  .contact-section {
+    margin-top: -20%;
+  }
 }
 
 .contact-container {

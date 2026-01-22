@@ -9,12 +9,16 @@ export default function CircleLoopSlider({
 }) {
   const baseItems = useMemo(
     () => [
-      { src: "/images/circleImg1.png", alt: "Character 1", bg: "#FEB8FF", border: "#A765E2" },
-      { src: "/images/circleImg2.png", alt: "Character 2", bg: "#FA6147", border: "#A765E2" },
-      { src: "/images/circleImg6.png", alt: "Character 6", bg: "#5CFFF1", border: "#A765E2" },
-      { src: "/images/circleImg3.png", alt: "Character 3", bg: "#F0C61A", border: "#A765E2" },
-      { src: "/images/circleImg4.png", alt: "Character 4", bg: "#FA6147", border: "#A765E2" },
-      { src: "/images/circleImg5.png", alt: "Character 5", bg: "#5CFFF1", border: "#A765E2" },
+      { src: "/images/wp.svg", alt: "Character 1", bg: "#1425e1", border: "#A765E2" },
+      { src: "/images/shopify.svg", alt: "Character 2", bg: "#7FAC67", border: "#A765E2" },
+      { src: "/images/webf.svg", alt: "Character 6", bg: "#5CFFF1", border: "#A765E2" },
+      { src: "/images/elementor.svg", alt: "Character 5", bg: "#FEB8FF", border: "#A765E2" },
+      { src: "/images/ss.svg", alt: "Character 3", bg: "#FA6147", border: "#A765E2" },
+      { src: "/images/wix.svg", alt: "Character 3", bg: "#5CFFF1", border: "#A765E2" },
+      { src: "/images/ps.svg", alt: "Character 5", bg: "#89D3FF", border: "#A765E2" },
+      { src: "/images/ae.svg", alt: "Character 5", bg: "#E7ADFB", border: "#A765E2" },
+      { src: "/images/figma.svg", alt: "Character 4", bg: "#FEB8FF", border: "#A765E2" },
+      { src: "/images/jvs.png", alt: "Character 5", bg: "#00304F", border: "#A765E2" },
     ],
     []
   );
