@@ -59,49 +59,61 @@ export default function ProjectsShowcase({ className = "" }) {
   );
 
   useEffect(() => {
-    if (reduce) return;
-  
+    const isMobile =
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 786px)").matches;
+
+    if (reduce || isMobile) {
+      // force cards flat on mobile
+      cardRefs.current.forEach((el) => {
+        if (!el) return;
+        el.style.setProperty("--p", "1");
+        el.style.transform = "none";
+      });
+      return;
+    }
+
     const tick = () => {
       const vh = window.innerHeight || 800;
-  
+
       // starts later + finishes later (your current tuning)
-      const start = vh * 0.80;
-      const end   = vh * 0.26;
+      const start = vh * 0.8;
+      const end = vh * 0.26;
       const DELAY = 0.22;
-  
+
       for (let i = 0; i < cardRefs.current.length; i++) {
         const el = cardRefs.current[i];
         if (!el) continue;
-  
+
         const r = el.getBoundingClientRect();
-  
+
         // ✅ viewport-based (page scroll)
         const raw = (start - r.top) / (start - end);
         const p0 = clamp01(raw);
-  
+
         // delay remap (keeps it flat longer)
         const p1 = clamp01((p0 - DELAY) / (1 - DELAY));
-  
+
         const ep = easeOutCubic(p1);
-  
+
         const st = stateRef.current[i];
         st.p = ep;
         st.pp = lerp(st.pp, st.p, 0.085);
-  
+
         // flat pose direction (your tuned values)
         const RX_START = 72;
         const RY_START = 0;
         const RZ_START = -40;
         const TX_START = 22;
         const TY_START = 32;
-  
+
         const rx = lerp(RX_START, 0, st.pp);
         const ry = lerp(RY_START, 0, st.pp);
         const rz = lerp(RZ_START, 0, st.pp);
         const tx = lerp(TX_START, 0, st.pp);
         const ty = lerp(TY_START, 0, st.pp);
         const sc = lerp(0.985, 1, st.pp);
-  
+
         el.style.setProperty("--p", st.pp.toFixed(4));
         el.style.setProperty("--rx", `${rx.toFixed(2)}deg`);
         el.style.setProperty("--ry", `${ry.toFixed(2)}deg`);
@@ -110,17 +122,16 @@ export default function ProjectsShowcase({ className = "" }) {
         el.style.setProperty("--ty", `${ty.toFixed(2)}px`);
         el.style.setProperty("--sc", `${sc.toFixed(4)}`);
       }
-  
+
       rafRef.current = requestAnimationFrame(tick);
     };
-  
+
     rafRef.current = requestAnimationFrame(tick);
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       rafRef.current = 0;
     };
   }, [reduce, projects.length]);
-  
 
   const btnRef = useRef(null);
 

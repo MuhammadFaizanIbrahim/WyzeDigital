@@ -51,7 +51,7 @@ export default function ScrollRevealLetterParagraph({ text = DEFAULT_TEXT }) {
       const raw = (start - r.top) / (start - end);
       const target = clamp01(raw);
 
-      current = lerp(current, target, 0.08);
+      current = lerp(current, target, 0.2);
       pEl.style.setProperty("--t", current.toFixed(4));
 
       raf = requestAnimationFrame(update);

@@ -3,6 +3,7 @@ import RedMarks from "../svgs/RedMarks.jsx";
 import ButtonArrow from "../svgs/ButtonArrow.jsx";
 import HomeButtonLine from "../svgs/HomeButtonLine.jsx";
 import HomeBlueStar from "../svgs/HomeBlueStar.jsx";
+import HomePinkStar from "../svgs/HomePinkStar.jsx";
 
 export default function Hero() {
   const btnRef = useRef(null);
@@ -35,15 +36,15 @@ export default function Hero() {
         <div className="min-h-[78vh] pb-16 pt-20 md:pt-24 hero-block">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             {/* Left content */}
-            <div className="relative w-220 hero-left">
+            <div className="relative w-200 hero-left">
               <h1 className="home-banner-title-one relative">
                 <span className="relative inline-block hero-title-line">
-                  Where chaos meets
+                  Where chaos meets clean
                   {/* show on mobile too, but different placement via CSS */}
-                  <RedMarks className="hero-redmarks absolute -right-14 -top-2 h-10 w-10" />
+                  <RedMarks className="hero-redmarks absolute right-50 -top-2 h-10 w-10" />
                 </span>
                 <br />
-                clean design
+                design
               </h1>
 
               <p className="home-banner-description-text mt-6 w-125 hero-desc">
@@ -77,9 +78,9 @@ export default function Hero() {
             <div className="hidden md:block" />
           </div>
 
-          <div className="pointer-events-none mt-20 ml-70 flex justify-start hero-star-row">
-            <span className="blue-star-rotator">
-              <HomeBlueStar className="blue-star-pulser h-18 w-auto select-none" />
+          <div className="pointer-events-none mt-10 ml-140 flex justify-start hero-star-row">
+            <span className="pink-star-rotator">
+              <HomePinkStar className="pink-star-pulser h-24 w-auto select-none" />
             </span>
           </div>
         </div>
