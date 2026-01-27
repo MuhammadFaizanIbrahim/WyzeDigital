@@ -32,16 +32,16 @@ export default function Hero() {
 
   return (
     <section className="relative w-full hero-shell">
-      <div className="mx-auto px-75 hero-wrap">
-        <div className="min-h-[78vh] pb-16 pt-20 md:pt-24 hero-block">
+      <div className="mx-auto px-55 hero-wrap">
+        <div className="min-h-[78vh] pb-16 md:pt-24 hero-block">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             {/* Left content */}
-            <div className="relative w-200 hero-left">
+            <div className="relative w-200 hero-left ">
               <h1 className="home-banner-title-one relative">
                 <span className="relative inline-block hero-title-line">
                   Where chaos meets clean
                   {/* show on mobile too, but different placement via CSS */}
-                  <RedMarks className="hero-redmarks absolute right-50 -top-2 h-10 w-10" />
+                  <RedMarks className="hero-redmarks absolute right-5 md:right-50 -top-2 h-6 w-6 md:h-10 md:w-10" />
                 </span>
                 <br />
                 design
@@ -74,13 +74,22 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Right empty space like screenshot */}
-            <div className="hidden md:block" />
-          </div>
-
-          <div className="pointer-events-none mt-10 ml-140 flex justify-start hero-star-row">
+            {/* Right content - Video container */}
+              <div className="relative md:-mt-14 md:w-[800px] rounded-2xl overflow-hidden">
+                <video
+                  className="w-full h-auto object-cover"
+                  src="/videos/hero_video.mp4" // replace with your video path
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              </div>
+          </div>{" "}
+          {/* ✅ CLOSE grid here */}
+          <div className="pointer-events-none mt-7 md:-mt-25 md:ml-145 flex justify-start">
             <span className="pink-star-rotator">
-              <HomePinkStar className="pink-star-pulser h-24 w-auto select-none" />
+              <HomePinkStar className="pink-star-pulser h-20 md:h-24 w-auto select-none" />
             </span>
           </div>
         </div>

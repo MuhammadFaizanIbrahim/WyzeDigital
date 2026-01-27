@@ -740,20 +740,6 @@ body {
     max-width: 100%;
   }
 
-  /* show + reposition the red marks on mobile */
-  .hero-redmarks {
-    display: block !important;
-    right: -10px !important;
-    top: 10px !important;
-    width: 26px !important;
-    height: 26px !important;
-  }
-
-  /* remove big left margin for star on mobile */
-  .hero-star-row {
-    margin-left: 0 !important; /* overrides ml-70 */
-    margin-top: 44px !important; /* slightly tighter */
-  }
 }
 
 /* Reduced motion: keep overlay from feeling jarring */
