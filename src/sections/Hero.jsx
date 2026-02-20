@@ -36,20 +36,19 @@ export default function Hero() {
         <div className="min-h-[78vh] pb-16 md:pt-24 hero-block">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             {/* Left content */}
-            <div className="relative w-200 hero-left ">
+            <div className="relative w-200 hero-left">
               <h1 className="home-banner-title-one relative">
-                <span className="relative inline-block hero-title-line">
-                  Where chaos meets clean
+                <span className="relative inline-block">
+                Scale Your <br /> Agency Without
                   {/* show on mobile too, but different placement via CSS */}
-                  <RedMarks className="hero-redmarks absolute right-5 md:right-50 -top-2 h-6 w-6 md:h-10 md:w-10" />
+                  <RedMarks className="hero-redmarks absolute right-20 md:right-50 -top-2 h-6 w-6 md:h-10 md:w-10" />
                 </span>
                 <br />
-                design
+                Hiring a Team
               </h1>
 
               <p className="home-banner-description-text mt-6 w-125 hero-desc">
-                We craft raw, honest, and impactful digital experiences that
-                make your brand stand out in a world of sameness.
+                White-label design, development, SEO, and growth fulfillment — delivered under your brand, invisible to your clients.
               </p>
 
               <div className="mt-8">
@@ -75,7 +74,7 @@ export default function Hero() {
             </div>
 
             {/* Right content - Video container */}
-              <div className="relative md:-mt-14 md:w-[800px] rounded-2xl overflow-hidden">
+              <div className="relative lg:-mt-14 lg:w-[800px] rounded-2xl overflow-hidden">
                 <video
                   className="w-full h-auto object-cover"
                   src="/videos/hero_video.mp4" // replace with your video path

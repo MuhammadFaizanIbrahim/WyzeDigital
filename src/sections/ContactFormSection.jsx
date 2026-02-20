@@ -54,7 +54,7 @@ export default function ContactFormSection({ className = "" }) {
             </span>
           </div>
 
-          <h2 className="contact-title">Let’s build something bold</h2>
+          <h2 className="contact-title">Connect today and scale away!</h2>
           <p className="contact-subtitle">
             Have a project in mind? Let’s connect and bring your digital ideas to life — the brutalist way.
           </p>

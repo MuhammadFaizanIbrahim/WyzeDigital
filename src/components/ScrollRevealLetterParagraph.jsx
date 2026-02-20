@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef } from "react";
 
 const DEFAULT_TEXT =
-  "WyzeDigital is a digital agency that blends bold creativity with raw honesty. We design unapologetically crafting digital experiences that are functional, striking, and human. Guided by Neo Brutalism, we challenge trends, break perfection, and build brands that speak truth through simplicity and powerful visual storytelling.";
+  "Wyze Digital is a white-label digital partner built to help agencies scale with confidence and clarity. We deliver WordPress websites powered by Elementor, Shopify experiences and can crush it with Wix, Squarespace, Webflow & more! We will also take your SEO to the MOON, powering your local search results to help convert visitors into paying customers.";
 
 function buildTokens(text) {
   // keeps spaces as tokens so wrapping matches exactly

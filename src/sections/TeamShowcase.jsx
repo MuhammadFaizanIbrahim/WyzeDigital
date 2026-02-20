@@ -16,33 +16,32 @@ export default function TeamShowcase() {
     typeof window !== "undefined" &&
     window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
-    const people = useMemo(
-      () => [
-        {
-          name: "Jason",
-          role: "Brandswaggin",
-          type: "vimeo",
-          videoId: "1069396395",
-          hash: "bb23cc33a8",
-        },
-        {
-          name: "Chantale",
-          role: "Branding Co.",
-          type: "vimeo",
-          videoId: "1069396364",
-          hash: "c2d31c6f1a",
-        },
-        {
-          name: "Catherine Luparello",
-          role: "Evoblocs",
-          type: "vimeo",
-          videoId: "1069396416",
-          hash: "acfe425787",
-        },
-      ],
-      []
-    );
-    
+  const people = useMemo(
+    () => [
+      {
+        name: "Jason",
+        role: "Brandswaggin",
+        type: "vimeo",
+        videoId: "1069396395",
+        hash: "bb23cc33a8",
+      },
+      {
+        name: "Chantale",
+        role: "Branding Co.",
+        type: "vimeo",
+        videoId: "1069396364",
+        hash: "c2d31c6f1a",
+      },
+      {
+        name: "Catherine Luparello",
+        role: "Evoblocs",
+        type: "vimeo",
+        videoId: "1069396416",
+        hash: "acfe425787",
+      },
+    ],
+    []
+  );
 
   const sectionRef = useRef(null);
   const pinRef = useRef(null);
@@ -69,7 +68,7 @@ export default function TeamShowcase() {
       pin.classList.toggle("is-bottom", r.bottom < vh);
 
       const total = Math.max(1, r.height - vh);
-      const pTarget = clamp01((-r.top) / total);
+      const pTarget = clamp01(-r.top / total);
 
       smoothRef.current.p = lerp(smoothRef.current.p, pTarget, 0.11);
       const p = smoothRef.current.p;
@@ -82,7 +81,10 @@ export default function TeamShowcase() {
 
       if (headerRef.current) {
         const titleY = lerp(0, -195, aT);
-        headerRef.current.style.setProperty("--titleY", `${titleY.toFixed(2)}px`);
+        headerRef.current.style.setProperty(
+          "--titleY",
+          `${titleY.toFixed(2)}px`
+        );
       }
 
       const firstStartY = 300;
@@ -102,7 +104,7 @@ export default function TeamShowcase() {
 
       const CARD_WIDTH = 420; // matches max width in CSS
       const spreadGapX = CARD_WIDTH + 80; // real visible gap
-            const centerIndex = (people.length - 1) / 2;
+      const centerIndex = (people.length - 1) / 2;
 
       const getRevealT = (i) => {
         if (i <= 0) return 1;
@@ -162,16 +164,15 @@ export default function TeamShowcase() {
         <div className="team-container">
           <div ref={headerRef} className="team-header">
             <h2 className="team-title">
-              Meet the minds behind{" "}
+              See what our Agency Partners{" "}
               <span className="team-title-word">
-                Wyze Digital
-                <RedMarks className="team-title-marks" />
+                Have to Say: <RedMarks className="team-title-marks" />
               </span>
             </h2>
 
             <p className="team-subtitle">
-              A passionate team of designers, developers, and strategists crafting
-              bold digital experiences that drive impact and innovation.
+              Trust Wyze Digital to handle your design and development so you
+              can focus on growing your awesome business!
             </p>
           </div>
 
@@ -186,13 +187,12 @@ export default function TeamShowcase() {
                   <div className="team-video">
                     {p.type === "vimeo" ? (
                       <iframe
-                      className="team-video-el"
-                      src={`https://player.vimeo.com/video/${p.videoId}?h=${p.hash}&autoplay=1&muted=1&loop=1&playsinline=1&controls=1`}
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      title={p.name}
-                    />
-                    
+                        className="team-video-el"
+                        src={`https://player.vimeo.com/video/${p.videoId}?h=${p.hash}&autoplay=1&muted=1&loop=1&playsinline=1&controls=1`}
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        title={p.name}
+                      />
                     ) : (
                       <video
                         className="team-video-el"

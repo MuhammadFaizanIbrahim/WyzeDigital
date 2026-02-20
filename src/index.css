@@ -279,11 +279,12 @@
 /* Mobile */
 @media (max-width: 768px) {
   :root {
-    --hero-h1-size: 42px;
+    --hero-h1-size: 36px;
     --hero-h1-line-height: 112%;
     --hero-desc-size: 15px;
     --lr-size: 18px;
     --lr-line-height: 145%;
+    --pr-title-size: 36px;
     --svc-title-size: 34px;
     --svc-card-title-size: 22px;
     --team-title-size: 34px;
@@ -1469,7 +1470,7 @@ body {
 
 .services-title-marks {
   position: absolute;
-  left: 130%;
+  left: 150%;
   top: -20px;
   transform: translateX(-50%) rotate(6deg);
   width: 47px;
@@ -1810,6 +1811,14 @@ body {
   pointer-events: none;
 }
 
+
+@media (max-width: 786px) {
+  .projects-title-marks {
+    left: 120%;
+  top: -60px;
+  }
+}
+
 .btn-secondary {
   font-family: var(--btn-font);
   font-size: var(--btn-size);
@@ -1931,6 +1940,14 @@ body {
   height: 40px;
   transform: translateX(-50%) rotate(6deg);
   pointer-events: none;
+}
+
+
+@media (max-width: 786px) {
+  .team-title-marks {
+    left: 115%;
+  top: -110px;
+  }
 }
 
 .team-stage {
