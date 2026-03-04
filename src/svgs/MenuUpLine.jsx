@@ -1,0 +1,20 @@
+import React from "react";
+
+export default function MenuUpLine({ className = "" }) {
+  return (
+    <svg
+      className={className}
+      width="18"
+      height="6"
+      viewBox="0 0 18 6"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M0.339111 5.60899C2.50578 3.60899 8.93911 -0.191008 17.3391 0.608992"
+        stroke="var(--nav-outline)"
+      />
+    </svg>
+  );
+}
