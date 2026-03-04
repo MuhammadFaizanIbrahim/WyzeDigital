@@ -302,11 +302,12 @@
     --lr-line-height: 145%;
     --pr-title-size: 36px;
     --svc-title-size: 34px;
-    --svc-card-title-size: 22px;
+    --svc-card-title-size: 20px;
     --team-title-size: 34px;
     --team-sub-size: 15px;
     --circle-sizes: 120px;
     --fm-size: 16px;
+    --svc-card-pad-x: 15vw;
   }
 }
 
@@ -1379,12 +1380,6 @@ body {
   overflow: visible;
 }
 
-@media (max-width: 380px) {
-  .service-card {
-    width: 90%;
-  }
-}
-
 /* Hover tilt: LEFT + BOTTOM */
 .service-card:hover {
   cursor: pointer;
@@ -1436,7 +1431,7 @@ body {
 /* Responsive layout */
 @media (max-width: 900px) {
   .service-card-inner {
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 15vw 1fr;
     grid-template-rows: auto auto;
   }
   .service-desc {
@@ -1922,7 +1917,6 @@ body {
   pointer-events: none;
 }
 
-
 .btn-secondary {
   font-family: var(--btn-font);
   font-size: var(--btn-size);
@@ -2027,8 +2021,8 @@ body {
 
 @media (max-width: 786px) {
   .team-title-marks {
-    left: 115%;
-    top: -110px;
+    left: 100%;
+    top: -100px;
   }
 }
 
