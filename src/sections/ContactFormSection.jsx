@@ -35,7 +35,7 @@ export default function ContactFormSection({ className = "" }) {
       const data = await res.json().catch(() => ({}));
 
       if (!res.ok) {
-        throw new Error(data?.error || "Submission failed");
+        throw new Error("Submission failed");
       }
 
       setStatus({
