@@ -309,6 +309,9 @@
     --fm-size: 16px;
     --svc-card-pad-x: 15vw;
   }
+  .team-title-marks, .projects-title-marks, .services-title-marks, .hero-redmarks{
+    display: none;
+  }
 }
 
 /* -----------------------------
@@ -1434,9 +1437,9 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
   }
-  /* .service-desc {
-    grid-column: 2 / 3;
-  } */
+  .service-num {
+    padding-bottom: 7px;
+  }
 }
 
 /* @media (max-width: 786px) {
