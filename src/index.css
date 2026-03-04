@@ -1395,7 +1395,7 @@ body {
 /* Card content */
 .service-card-inner {
   display: grid;
-  grid-template-columns: 0.7fr 1fr 1fr;
+  grid-template-columns: 0.7fr 0.9fr 1fr;
   align-items: center;
   padding: var(--svc-card-pad-y) var(--svc-card-pad-x);
 }
@@ -1424,7 +1424,7 @@ body {
   letter-spacing: var(--svc-card-desc-letter-spacing);
   color: var(--ink);
   opacity: 0.9;
-  width: 450px;
+  max-width: 520px;
 }
 
 .service-card:hover .service-num,
@@ -1444,11 +1444,11 @@ body {
   }
 }
 
-@media (max-width: 786px) {
+/* @media (max-width: 786px) {
   .service-desc {
     width: 300px;
   }
-}
+} */
 
 .service-pop {
   position: absolute;
@@ -1922,12 +1922,6 @@ body {
   pointer-events: none;
 }
 
-@media (max-width: 786px) {
-  .projects-title-marks {
-    left: 120%;
-    top: -60px;
-  }
-}
 
 .btn-secondary {
   font-family: var(--btn-font);
